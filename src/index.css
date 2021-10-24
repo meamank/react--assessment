@@ -35,6 +35,7 @@ code {
 }
 .card-img {
   height: 160px;
+  border-radius: 6px;
 }
 .col img {
   width: 20px;
@@ -42,6 +43,7 @@ code {
 }
 .img-text {
   font-size: 10px;
+  color: #979595;
   font-weight: 700;
   text-align: center;
   display: flex;
@@ -49,7 +51,7 @@ code {
   align-items: center;
 }
 .vl {
-  border-left: 1px solid #d3d3d3;
+  border-left: 1px solid #c2c0c0;
   line-height: 30px;
 }
 .overlay {
