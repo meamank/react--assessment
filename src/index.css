@@ -60,12 +60,14 @@ code {
   width: 100%;
 }
 .card-text {
-  color: azure;
+  color: #979595;
   background: rgba(32, 32, 32, 0.568);
   font-size: 12px;
+  font-weight: 600;
 }
 span {
-  color: #d3d3d3;
+  color: azure;
+  font-weight: 600;
 }
 
 @media (max-width: 768px) {

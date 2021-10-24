@@ -1,6 +1,6 @@
 import likeImage from "../../assests/favorite.svg";
 import eyeImage from "../../assests/visibility.svg";
-import Image from "../Image";
+import Image from "../Image/Image";
 
 const Card = (props) => {
   return (

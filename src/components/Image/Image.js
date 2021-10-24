@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Hover from "./Hover";
 
 const Image = (props) => {
   const [hover, setHover] = useState(false);
@@ -10,18 +11,15 @@ const Image = (props) => {
         onMouseLeave={() => setHover(false)}
         className="card-img p-1"
         src={props.image}
-        alt=""
+        alt="flower"
       />
       {hover && (
-        <div
-          className="overlay p-1"
-          onMouseEnter={() => setHover(true)}
-          onMouseLeave={() => setHover(false)}
-        >
-          <p className="card-text p-1">
-            <span>{props.tags}</span> by <span>{props.user}</span>
-          </p>
-        </div>
+        <Hover
+          onHover= {() => setHover(true)}
+          onClose= {() => setHover(false)}
+          tags= {props.tags}
+          user= {props.user}
+        />
       )}
     </div>
   );
