@@ -1,13 +1,73 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(243 244 246);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.card {
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto;
+}
+.card-body {
+  width: 100%;
+  border-top: 1px solid #d3d3d3;
+  padding: 0;
+  align-items: center;
+  height: 30px;
+}
+.image {
+  padding-bottom: 30px;
+  width: 100%;
+}
+.gap {
+  row-gap: 10px;
+  column-gap: 10px;
+}
+.card-img {
+  height: 160px;
+}
+.col img {
+  width: 20px;
+  padding-right: 5px;
+}
+.img-text {
+  font-size: 10px;
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.vl {
+  border-left: 1px solid #d3d3d3;
+  line-height: 30px;
+}
+.overlay {
+  position: absolute;
+  bottom: 25%;
+  width: 100%;
+}
+.card-text {
+  color: azure;
+  background: rgba(32, 32, 32, 0.568);
+  font-size: 12px;
+}
+span {
+  color: #d3d3d3;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 70%;
+  }
 }

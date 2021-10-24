@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+
+import Card from "./components/Card/Card";
 
 function App() {
+  const [data, setData] = useState(null);
+
+  const fetchData = () => {
+    fetch(
+      "https://pixabay.com/api/?key=13590376-d01056b8c3b3030d4ab3d38a5&q=yellow+flowers&image_type=photo&per_page=8"
+    )
+      .then((response) => response.json())
+      .then((result) => setData(result))
+      .catch((error) => console.log("error", error));
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  console.log(data);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="container pt-3">
+        <div className="row">
+          {data &&
+            data.hits.map((item) => (
+              <Card
+                id={item.id}
+                likes={item.likes}
+                views={item.views}
+                image={item.webformatURL}
+                tags={item.tags}
+                user={item.user}
+              />
+            ))}
+        </div>
+      </div>
+    </>
   );
 }
 
